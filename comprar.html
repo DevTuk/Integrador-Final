@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Actividad 4</title>
+</head>
+<body>
+    <header>
+        <div id="barra" class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid d-flex flex-nowrap justify-content-between">
+                <div class="container d-flex w-25 p-0 m-0">
+                  <a class="navbar-brand" href="index.html">
+                      <div class="container d-flex">
+                        <img id="codo" src="images/codoacodo.png" alt="codo">
+                        <p class="text-light m-0">Conf Bs As</p>
+                      </div>
+                  </a>
+                </div>
+                <div class=" pull-right m-0">
+                <button class="navbar-toggler navbar-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div  class="collapse navbar-collapse " id="navbarNav">
+                  <ul class="navbar-nav d-flex justify-content-end w-100">
+                    <li class="nav-item">
+                      <a id="conferencia" class="nav-link active" aria-current="page" href="index.html">La conferencia</a>
+                    </li>
+                    <li class="nav-item">
+                      <a id="registrate" class="nav-link" href="registro.html">Registrate</a>
+                    </li>
+                    <li class="nav-item">
+                      <a id="registrate" class="nav-link" href="registrados.php">Conoce los registrados</a>
+                    </li>
+                    
+                    
+                    <li class="nav-item">
+                      <a id="comprar" class="nav-link" href="comprar.html">Comprar tickets</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+            </nav>
+          </div>
+      </header>
+
+      <main>
+
+        <div class="cartas">
+                <div class="card1" style="width:13rem; height: 13rem;">
+                    <div class="card-body">
+                        <h5 class="card-title mt-3 mb-3">Estudiante</h5>
+                        <p class="card-subtitle mt-3 mb-3">Tienen un descuento</p>
+                        <p class="card-text1 mt-3 mb-3">80%</p>
+                        <p class="card-text2 mt-3 mb-3">*presentar documentación</p>
+                    </div>
+                </div>
+
+                <div class="card2" style="width:13rem; height: 13rem;">
+                    <div class="card-body">
+                        <h5 class="card-title mt-3 mb-3">Trainee</h5>
+                        <p class="card-subtitle mt-3 mb-3">Tienen un descuento</p>
+                        <p class="card-text1 mt-3 mb-3">50%</p>
+                        <p class="card-text2 mt-3 mb-3">*presentar documentación</p>
+                    </div>
+                </div>
+
+                <div class="card3" style="width:13rem; height: 13rem;">
+                    <div class="card-body">
+                        <h5 class="card-title mt-3 mb-3">Junior</h5>
+                        <p class="card-subtitle mt-3 mb-3">Tienen un descuento</p>
+                        <p class="card-text1 mt-3 mb-3">15%</p>
+                        <p class="card-text2 mt-3 mb-3">*presentar documentación</p>
+                    </div>
+                </div>
+        </div>
+
+        <div class="container d-flex flex-column align-items-center justify-content-center my-3 col-md-9 col-10">
+
+            <div class="titulos">
+                <p class="titulo1">
+                  <h6>VENTA</h6>
+                </p>
+                <p class="titulo2">
+                  <h2>VALOR DEL TICKET $200</h2>
+                  </p>
+            </div>
+            
+            <form id="formulario" class="row g-3">
+                  <div class="col-md-6">
+                    <label for="inputNombre" class="form-label"></label>
+                    <input type="nombre" class="form-control" id="nombre" placeholder="Nombre">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputApellido" class="form-label"></label>
+                    <input type="text" class="form-control" id="apellido"placeholder="Apellido">
+                  </div>
+                  <div class="col-12">
+                    <label for="inputCorreo" class="form-label"></label>
+                    <input type="email" class="form-control" id="correo" placeholder="Correo">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputCantidad" class="form-label">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputState" class="form-label">Categoría</label>
+                    <select id="inputState1" class="form-select">
+                      <option selected value="1">Estudiante</option>
+                      <option value="2">Trainee</option>
+                      <option value="3">Junior</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-11 col-md-6 col-lg-6 col-xl-6">
+                    <button type="reset" class="container-fluid btn btn-primary" onclick="borrar()">Borrar</button>
+                  </div>
+                  <div class="col-sm-11 col-md-6 col-lg-6 col-xl-6">
+                    <button type="button" class="container-fluid btn btn-primary" onclick="recibir()">Resumen</button>
+                  </div>
+                  <div class="usuario col-12">
+                    <p class="p-3 m-0">Total a pagar $</p>
+                    <div id="total"></div>
+                  </div>
+            </form>
+      </div>
+      </main>
+
+      <footer class="container-fluid p-0">
+        <div class="d-flex flex-wrap justify-content-xs-between justify-content-md-around m-2 p-5" id="footer">
+            <div> <a href="#" target="blank">Preguntas Frecuentes</a></div>
+            <div> <a href="#" target="blank">Contáctanos</a></div>
+            <div> <a href="#" target="blank">Prensa</a> </div>
+            <div> <a href="#" target="blank">Conferencia</a> </div>
+            <div> <a href="#" target="blank">Términos y condiciones</a> </div>
+            <div> <a href="#" target="blank">Privacidad</a> </div>
+            <div> <a href="#" target="blank">Estudiantes</a> </div>
+        </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+      </script>
+      <script src="scripts/script.js">
+      </script>
+      
+</body>
+</html>
